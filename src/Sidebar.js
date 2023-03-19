@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from "react";
 import logo from './logo.svg'
 import { FaTimes } from 'react-icons/fa'
 import { social, links } from './data'
+import { AppContext } from "./context";
 
 const Sidebar = () => {
+  const data = useContext(AppContext);
+
   return (
     <aside className={`sidebar show-sidebar`}>
       <div className="sidebar-header">

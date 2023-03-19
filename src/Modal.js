@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from "react";
 import { FaTimes } from 'react-icons/fa'
+import { AppContext } from "./context";
+
 const Modal = () => {
+  const data = useContext(AppContext);
 
   return (
     <div className={`modal-overlay`}>

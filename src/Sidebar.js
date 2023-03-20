@@ -5,13 +5,13 @@ import { social, links } from './data'
 import { AppContext } from "./context";
 
 const Sidebar = () => {
-  const data = useContext(AppContext);
+  const { isSidebarOpen, closeSidebar } = useContext(AppContext);
 
   return (
-    <aside className={`sidebar show-sidebar`}>
+    <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
       <div className="sidebar-header">
         <img src={logo} className="logo" alt="coding addict" />
-        <button className="close-btn">
+        <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
       </div>
